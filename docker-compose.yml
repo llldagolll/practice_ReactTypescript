@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  typescript:
+    container_name: PracticeTypescript
+    build:
+      context: .
+      dockerfile: ./docker/front/Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
+    tty: true
+    volumes:
+      - ./app/typescript:/app
